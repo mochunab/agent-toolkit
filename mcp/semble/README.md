@@ -2,6 +2,8 @@
 
 [semble_rs](https://github.com/ArcadeLabsInc/semble)를 호출하는 코드 검색 MCP 서버. 서버 정본은 [mochunab/agent-toolkit의 mcp/semble](https://github.com/mochunab/agent-toolkit/tree/main/mcp/semble)이다.
 
+이 문서는 Semble 서버의 설치·연결·이전 안내다. `npm ci`는 이 폴더의 Node.js 의존성만 설치한다. 외부 `semble_rs` 검색 엔진과 MCP 연결 등록은 별도 준비가 필요하다.
+
 기존 `mochunab/semble-mcp`의 `6e8ae7e`에서 서버 코드·패키지·잠금 파일을 그대로 옮겼다. 도구 이름과 입력 규격은 동일하다.
 
 ## 도구
@@ -68,6 +70,8 @@ claude mcp add --scope user semble -- node "$PWD/server.mjs"
 ## 라이선스
 
 이 MCP 래퍼는 Toolkit의 [MIT 라이선스](../../LICENSE)를 따른다. 외부 검색 엔진과 npm 의존성은 각 프로젝트의 라이선스를 따른다.
+
+문서 갱신일: 2026-10-04. 서버 입력 규격은 [server.mjs](server.mjs), 의존성은 [package.json](package.json)에서 확인한다.
 
 ## 현재 확인된 제한
 
