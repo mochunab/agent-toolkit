@@ -1,0 +1,70 @@
+# npm project template. Read references/ci-gate.md before activating.
+name: Security and deployment
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-deploy-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  security:
+    name: security-gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SECURITY_TEST_BASE_URL: ${{ vars.SECURITY_TEST_BASE_URL }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Verify full history
+        run: test "$(git rev-parse --is-shallow-repository)" = false
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+      - name: Scan history and deployment files for secrets
+        run: npm run security:secrets
+      - name: Audit dependencies
+        run: npm audit --audit-level=high
+      - name: Static security analysis
+        run: npm run security:sast
+      - name: Authorization and security regression tests
+        run: npm run security:tests
+      - name: Verify staging headers and HTTPS
+        run: npm run security:headers
+      - name: Build checked commit
+        run: npm run build
+
+  deploy:
+    needs: security
+    if: >-
+      github.event_name == 'push' && github.ref == 'refs/heads/main' &&
+      needs.security.result == 'success' && vars.SECURITY_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: production
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: Deploy the exact checked commit through the project pipeline
+        run: npm run deploy:production

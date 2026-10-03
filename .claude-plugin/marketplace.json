@@ -8,6 +8,12 @@
       "source": "./",
       "description": "Aside connection checks and browser workflows for coding agents.",
       "version": "0.1.0"
+    },
+    {
+      "name": "security-gate",
+      "source": "./plugins/security-gate",
+      "description": "Evidence-based security review, deployment gate, CI blocking template, and deploy-checker agent.",
+      "version": "0.1.0"
     }
   ]
 }
