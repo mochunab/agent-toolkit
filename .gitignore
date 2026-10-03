@@ -8,4 +8,3 @@ __pycache__/
 *.log
 .credentials.json
 settings.local.json
-
