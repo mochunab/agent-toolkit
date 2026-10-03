@@ -23,6 +23,6 @@ claude mcp add --scope user aside -- "$(command -v aside)" mcp
 
 ## Semble MCP
 
-mochunab의 기존 공개 프로젝트: [semble-mcp](https://github.com/mochunab/semble-mcp).
+BM25와 의미 검색을 결합하는 코드 검색 MCP 래퍼다. [서버 소스와 설치 안내](semble/README.md)는 이 Toolkit에서 관리한다.
 
-BM25와 의미 검색을 결합하는 코드 검색 MCP 래퍼다. 서버 소스와 설치 지침은 해당 저장소에서 관리한다. 기반 검색 엔진은 외부 프로젝트이므로 해당 프로젝트의 설치 조건과 라이선스도 확인한다.
+기존 [mochunab/semble-mcp](https://github.com/mochunab/semble-mcp)는 이전 안내와 과거 설치본 보존용이다. 기반 검색 엔진 `semble_rs`는 외부 프로젝트이므로 해당 프로젝트의 설치 조건과 라이선스도 확인한다.

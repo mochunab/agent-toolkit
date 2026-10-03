@@ -2,7 +2,7 @@
 
 mochunab이 사용하는 에이전트 워크플로를 공유하는 저장소. 스킬, Claude Code 플러그인, MCP 연결 안내를 필요한 것만 골라 설치한다.
 
-첫 공개에는 **Aside 브라우저 스킬**을 담았다. 사용자별 경로·계정 상태·키가 필요한 자산과 외부에서 설치한 스킬은 묶어서 복사하지 않았다. 다른 직접 제작 자산은 공개용 정리를 마친 뒤 추가한다.
+**Aside 브라우저 스킬과 Semble MCP 서버**를 담았다. 사용자별 경로·계정 상태·키가 필요한 자산과 외부에서 설치한 스킬은 묶어서 복사하지 않았다. 다른 직접 제작 자산은 공개용 정리를 마친 뒤 추가한다.
 
 ## 포함 항목
 
@@ -11,7 +11,7 @@ mochunab이 사용하는 에이전트 워크플로를 공유하는 저장소. �
 | [aside-browser](skills/aside-browser/SKILL.md) | MCP 연결 확인, 설치·연결 승인 요청, exec/repl 선택, 현재 CLI 가이드 확인 |
 | Claude Code 플러그인 | 위 스킬을 마켓플레이스로 설치 |
 | [Aside MCP 안내](mcp/README.md) | CLI 설치와 MCP 등록을 구분하고 실제 연결 확인 |
-| [Semble MCP](https://github.com/mochunab/semble-mcp) | 별도 공개 저장소에서 관리하는 코드 검색 MCP 래퍼 |
+| [Semble MCP](mcp/semble/README.md) | 이 저장소에서 관리하는 BM25·의미 검색 기반 코드 검색 MCP 래퍼 |
 
 ## Claude Code: 플러그인으로 설치
 
@@ -23,6 +23,10 @@ claude plugin install agent-toolkit@mochunab-tools --scope user
 설치 후 호스트 안내에 따라 플러그인을 다시 로드한다. "Aside로 현재 페이지를 확인해줘"처럼 요청한다. Aside MCP가 없으면 스킬이 설치·연결 진행 여부를 묻는다.
 
 플러그인은 스킬만 제공한다. Aside 앱·CLI 설치와 MCP 연결은 [연결 안내](mcp/README.md)를 따른다.
+
+## Semble MCP 설치
+
+[Semble 설치 안내](mcp/semble/README.md)를 따른다. 서버 정본은 `mcp/semble/`이며, 기존 `mochunab/semble-mcp` 저장소는 이전 안내와 과거 설치본 보존용이다. 위 Aside 플러그인을 설치하는 것만으로 Semble 서버가 설치되지는 않는다.
 
 ## 스킬만 설치
 
@@ -48,7 +52,7 @@ Claude Code는 `skills/aside-browser` 폴더를 `~/.claude/skills/aside-browser`
 
 ## 출처와 라이선스
 
-이 저장소의 연결 확인·라우팅 지침과 패키징은 커뮤니티 제작물이며 MIT로 배포한다. Aside Browser·CLI·MCP 서버 자체를 포함하거나 재배포하지 않는다. [공식 개발 문서](https://docs.aside.com/help/developers)를 따른다. Aside 공식 스킬을 다시 설치하면 사용자 스킬 사본이 교체될 수 있다.
+이 저장소의 연결 확인·라우팅 지침, Semble MCP 래퍼와 패키징은 MIT로 배포한다. Aside Browser·CLI·MCP 서버 자체와 외부 `semble_rs` 바이너리는 포함하거나 재배포하지 않는다. [Aside 공식 개발 문서](https://docs.aside.com/help/developers)를 따른다. Aside 공식 스킬을 다시 설치하면 사용자 스킬 사본이 교체될 수 있다.
 
 ## 검증
 

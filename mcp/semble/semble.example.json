@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "semble": {
+      "command": "node",
+      "args": ["/absolute/path/to/agent-toolkit/mcp/semble/server.mjs"]
+    }
+  }
+}

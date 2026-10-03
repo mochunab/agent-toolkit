@@ -1,0 +1,10 @@
+{
+  "name": "semble-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.mjs",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  }
+}
