@@ -1,6 +1,6 @@
 {
   "name": "security-gate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Security review modes, evidence-based deployment gate, CI blocking template, and a final deploy-checker agent.",
   "author": { "name": "mochunab" },
   "homepage": "https://github.com/mochunab/agent-toolkit/tree/main/plugins/security-gate",

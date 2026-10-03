@@ -21,10 +21,12 @@
 - `.nvmrc`와 npm 잠금 파일을 프로젝트 버전에 맞춘다. 다른 Node 설정 파일을 쓰면 `node-version-file`을 바꾼다.
 - 외부 스캐너/규칙 추가는 이유·대안·영향과 승인을 확인한다. 현재 템플릿은 스캐너를 자동 설치하지 않는다. 선택된 도구·규칙을 검토하고 버전/SHA 또는 검증된 배포물 해시를 고정해 설치 단계를 추가한다.
 - lifecycle scripts는 기본 실행하지 않는다. codegen/빌드 준비가 필요하면 검토한 특정 명령만 추가한다. PR job에 production 시크릿을 주지 않는다.
+- 의존성 예외는 [배포 게이트의 의존성 예외](deployment-gate.md#의존성-예외) 기준으로 `security/dependency-exceptions.json`에 기록한다. 예외 파일·감사 스크립트 변경은 PR 검토 대상이며, 런타임 패키지를 예외 처리하지 않는다.
 - 다음 프로젝트 명령이 없거나 실행되지 않으면 검사는 실패해야 한다. 빈 스크립트나 무조건 성공하는 대체 명령으로 채우지 않는다.
 
 | npm script | 필수 구현 |
 |---|---|
+| `security:deps` | 의존성 HIGH/CRITICAL 검사. 승인된 빌드·개발 전용 예외만 제외. npm은 [`dependency-audit-gate.mjs`](../assets/dependency-audit-gate.mjs)를 프로젝트(예: `scripts/security/`)에 복사해 연결. 미승인·만료·무효 예외, 감사 실행 실패 시 비정상 종료 |
 | `security:secrets` | 승인된 스캐너로 full Git history와 현재 배포 파일 검사. 원문 시크릿 마스킹. 탐지/실행 실패 시 비정상 종료 |
 | `security:sast` | 검토·고정된 보안 규칙으로 대상 언어 분석. 차단 발견/실행 실패 시 비정상 종료 |
 | `security:tests` | 격리된 테스트 DB/사용자 A·B·비인증/일반·관리 권한, 입력 및 CSRF 등의 실제 허용·거부 테스트. 필요한 테스트가 skip되면 실패 |

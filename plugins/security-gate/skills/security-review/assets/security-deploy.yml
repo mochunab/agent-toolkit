@@ -37,8 +37,8 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Scan history and deployment files for secrets
         run: npm run security:secrets
-      - name: Audit dependencies
-        run: npm audit --audit-level=high
+      - name: Audit dependencies (only approved build/dev-only exceptions)
+        run: npm run security:deps
       - name: Static security analysis
         run: npm run security:sast
       - name: Authorization and security regression tests

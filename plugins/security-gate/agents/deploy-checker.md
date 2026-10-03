@@ -14,6 +14,7 @@ tools: Read, Glob, Grep, Bash
 - `security-review` 결과와 같은 스킬의 `references/deployment-gate.md`를 확인한다. 플러그인 설치 시 `${CLAUDE_PLUGIN_ROOT}/skills/security-review/references/deployment-gate.md`, 수동 설치 시 사용자 스킬 폴더의 `security-review/references/deployment-gate.md`다. 기준 문서를 찾지 못하면 미검증으로 판정한다. 결과가 없으면 호출자에게 검사를 요청하고 배포 중단으로 판정한다
 - 동일 프로젝트·SHA·작업 트리·배포 환경에 대한 결과만 인정한다. 변경 후 오래된 결과를 재사용하지 않는다
 - 필수 항목 Block/미검증 또는 CI 실패·생략·취소면 중단. N/A는 기능 부재 근거가 있어야 한다
+- 의존성 "예외 승인"은 deployment-gate.md의 의존성 예외 조건(빌드·개발 전용, 도달 불가 근거, 사용자 승인, 승인일로부터 90일 이내 만료, non-breaking fix 없음)을 확인한 경우만 인정한다. 런타임 패키지 예외나 만료된 예외는 Block
 
 ## 검사 항목
 
@@ -32,7 +33,7 @@ tools: Read, Glob, Grep, Bash
 
 ### 4. 보안 점검
 - 전체 Git 히스토리 및 현재 배포 파일 시크릿 스캔 결과
-- 의존성 HIGH/CRITICAL 0건 및 SAST 결과
+- 의존성 미승인 HIGH/CRITICAL 0건(런타임 패키지는 예외 불가) 및 SAST 결과
 - 인증·권한/RLS의 실제 허용/거부 테스트 결과
 - Service Role Key 클라이언트/산출물 노출 여부
 - 실제 URL의 CSP·보안 헤더·HTTPS/TLS 검증 결과
@@ -63,6 +64,9 @@ tools: Read, Glob, Grep, Bash
 
 ### 미검증
 - 필수 검사 누락/실행 실패/증거 부족. 해소 전 배포 중단
+
+### 예외 승인
+- 의존성 예외 항목·범위·근거·승인자·만료일. Pass와 별도 표기
 
 ### 경고 (Warning)
 - 확인 필요하지만 배포 가능

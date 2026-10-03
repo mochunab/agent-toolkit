@@ -498,7 +498,7 @@ Before ANY production deployment, apply [the deployment gate](references/deploym
 - [ ] **Security Headers**: CSP, X-Frame-Options configured
 - [ ] **Error Handling**: No sensitive data in errors
 - [ ] **Logging**: No sensitive data logged
-- [ ] **Dependencies**: Up to date, no vulnerabilities
+- [ ] **Dependencies**: No unapproved HIGH/CRITICAL; runtime packages are never excepted (see deployment gate)
 - [ ] **Row Level Security**: Enabled in Supabase
 - [ ] **CORS**: Properly configured
 - [ ] **File Uploads**: Validated (size, type)

@@ -13,7 +13,7 @@
       "name": "security-gate",
       "source": "./plugins/security-gate",
       "description": "Evidence-based security review, deployment gate, CI blocking template, and deploy-checker agent.",
-      "version": "0.1.0"
+      "version": "0.2.0"
     }
   ]
 }
