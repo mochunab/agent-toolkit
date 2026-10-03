@@ -1,0 +1,10 @@
+{
+  "name": "agent-toolkit",
+  "version": "0.1.0",
+  "description": "Reusable agent workflows by mochunab, starting with Aside browser connection checks and control routing.",
+  "author": { "name": "mochunab" },
+  "homepage": "https://github.com/mochunab/agent-toolkit",
+  "repository": "https://github.com/mochunab/agent-toolkit",
+  "license": "MIT",
+  "keywords": ["aside", "browser", "skills", "mcp"]
+}

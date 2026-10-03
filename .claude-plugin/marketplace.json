@@ -1,0 +1,13 @@
+{
+  "name": "mochunab-tools",
+  "owner": { "name": "mochunab" },
+  "metadata": { "description": "Reusable agent workflows, skills, and MCP setup guides by mochunab." },
+  "plugins": [
+    {
+      "name": "agent-toolkit",
+      "source": "./",
+      "description": "Aside connection checks and browser workflows for coding agents.",
+      "version": "0.1.0"
+    }
+  ]
+}

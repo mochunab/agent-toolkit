@@ -1,0 +1,11 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.credentials.json
+settings.local.json
+

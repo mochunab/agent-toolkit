@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "aside": {
+      "command": "aside",
+      "args": ["mcp"]
+    }
+  }
+}
