@@ -11,6 +11,7 @@ tools: Read, Glob, Grep, Bash
 
 ## 진입 및 차단 기준
 - 프로젝트별 AGENTS/CLAUDE와 요구사항을 먼저 읽고 기존 검사 명령을 사용한다. 로컬 빌드 금지 같은 프로젝트 제한을 우회하지 않는다
+- 프로젝트 CLAUDE/AGENTS의 `보안 프로파일:` 을 확인한다. `중량`이 명시된 경우만 `deployment-gate.md`, 없거나 `경량`이면 `deployment-gate-light.md` 기준이다(기본 경량). 경량의 `경량 생략` 항목(격리 환경·인증 fixture·CI 강제 차단·우회 경로)은 Block/미검증으로 보지 않는다. 그 외 필수 항목 기준은 동일하다
 - `security-review` 결과와 같은 스킬의 `references/deployment-gate.md`를 확인한다. 플러그인 설치 시 `${CLAUDE_PLUGIN_ROOT}/skills/security-review/references/deployment-gate.md`, 수동 설치 시 사용자 스킬 폴더의 `security-review/references/deployment-gate.md`다. 기준 문서를 찾지 못하면 미검증으로 판정한다. 결과가 없으면 호출자에게 검사를 요청하고 배포 중단으로 판정한다
 - 동일 프로젝트·SHA·작업 트리·배포 환경에 대한 결과만 인정한다. 변경 후 오래된 결과를 재사용하지 않는다
 - 필수 항목 Block/미검증 또는 CI 실패·생략·취소면 중단. N/A는 기능 부재 근거가 있어야 한다

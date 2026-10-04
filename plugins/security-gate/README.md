@@ -12,7 +12,8 @@
 |---|---|---|
 | [security-review 스킬](skills/security-review/SKILL.md) | 요청에 따라 점검·CI 적용·배포 게이트·개발 지원 모드 선택 | 자동 설치 |
 | [점검 절차](skills/security-review/references/review-workflow.md) | 읽기 전용 보안 점검과 보고 형식 | 스킬에 포함 |
-| [배포 게이트](skills/security-review/references/deployment-gate.md) | 배포 전 필수 검사, Pass·Block·미검증·N/A 판정 | 스킬에 포함 |
+| [배포 게이트 경량](skills/security-review/references/deployment-gate-light.md) (기본) | 개인·사이드 프로젝트용. 로컬 검사 + 배포 후 운영 스모크, 격리 환경·CI 강제 차단은 생략 | 스킬에 포함 |
+| [배포 게이트 중량](skills/security-review/references/deployment-gate.md) | 팀·결제·타인 개인정보 프로젝트용. 배포 전 필수 검사, Pass·Block·미검증·N/A 판정 | 스킬에 포함 |
 | [CI 적용 절차](skills/security-review/references/ci-gate.md) | 프로젝트에 자동 검사·배포 차단을 연결하고 실제로 막히는지 검증 | 스킬에 포함 |
 | [CI 템플릿](skills/security-review/assets/security-deploy.yml) | npm 프로젝트용 GitHub Actions 초안. 자동 활성화되지 않음 | 스킬에 포함 |
 | [의존성 감사 게이트](skills/security-review/assets/dependency-audit-gate.mjs) | `npm audit` 결과에서 승인된 빌드·개발 전용 예외만 제외하고 HIGH/CRITICAL 차단. 의존성 없는 Node 스크립트 | 스킬에 포함 |
@@ -189,6 +190,7 @@ CI는 코드가 바뀔 때 자동으로 검사·배포하는 절차다. 사용�
 
 ## 변경 이력
 
+- 0.4.0 (2026-10-04): 배포 게이트를 경량/중량 두 프로파일로 분리. 기본은 경량(`deployment-gate-light.md`)이고, 프로젝트 CLAUDE/AGENTS에 `보안 프로파일: 중량`을 적으면 기존 `deployment-gate.md`를 적용한다. 중량 문서는 변경 없음.
 - 0.3.0 (2026-10-04): 시크릿 노출·공개 저장소·보호 파일 차단 훅 3개 추가, 보안 규칙을 세션 시작마다 자동 적용(`templates/` → `rules/`). `sk-` 패턴이 `task-…` 같은 단어 안에서 오탐하던 문제와 `.env.example` 차단 문제를 고친 공개판
 - 0.2.0 (2026-10-04): 의존성 예외 승인 경로와 [의존성 감사 게이트](skills/security-review/assets/dependency-audit-gate.mjs) 추가. CI 템플릿의 `npm audit` 단계를 `security:deps`로 교체. 빌드 전용 도구 때문에 배포가 무기한 막히던 문제 수정
 - 0.1.0 (2026-10-04): 첫 공개
