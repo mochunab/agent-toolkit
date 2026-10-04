@@ -1,7 +1,11 @@
 {
   "name": "mochunab-tools",
-  "owner": { "name": "mochunab" },
-  "metadata": { "description": "Reusable agent workflows, skills, and MCP setup guides by mochunab." },
+  "owner": {
+    "name": "mochunab"
+  },
+  "metadata": {
+    "description": "Reusable agent workflows, skills, and MCP setup guides by mochunab."
+  },
   "plugins": [
     {
       "name": "agent-toolkit",
@@ -14,6 +18,12 @@
       "source": "./plugins/security-gate",
       "description": "Evidence-based security review, deployment gate, CI blocking template, deploy-checker agent, security rules, and guard hooks.",
       "version": "0.3.0"
+    },
+    {
+      "name": "hwp",
+      "source": "./plugins/hwp",
+      "description": "Read, build and fill Korean HWPX (.hwpx) documents without Hancom Office.",
+      "version": "0.1.0"
     }
   ]
 }

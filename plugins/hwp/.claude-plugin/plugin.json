@@ -1,0 +1,10 @@
+{
+  "name": "hwp",
+  "version": "0.1.0",
+  "description": "Read, build and fill Korean HWPX (.hwpx) documents without Hancom Office, using pure-Python python-hwpx.",
+  "author": { "name": "mochunab" },
+  "homepage": "https://github.com/mochunab/agent-toolkit/tree/main/plugins/hwp",
+  "repository": "https://github.com/mochunab/agent-toolkit",
+  "license": "MIT",
+  "keywords": ["hwpx", "hwp", "hancom", "korean", "document", "form"]
+}
