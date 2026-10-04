@@ -7,7 +7,7 @@
 | `skills/security-review/SKILL.md` | 영문 Security Checklist(1~10장), Security Testing, Pre-Deployment Checklist, Resources | 요청별 모드 표·배포 게이트 연결·한국어 진입 문구 추가, zod 예시를 `error.issues`로 변경, Pre-Deployment Checklist의 의존성 항목을 예외 기준에 맞게 변경, 체크리스트를 증거 판정 기준의 하위 참고로 위치 조정 |
 | `skills/security-review/cloud-infrastructure-security.md` | 전체 | 수정 없음 |
 
-`references/`, `assets/`, `agents/deploy-checker.md`, `templates/`, `README.md`는 이 저장소에서 작성했으며 저장소의 [MIT 라이선스](../../LICENSE)를 따른다.
+`references/`, `assets/`, `agents/deploy-checker.md`, `hooks/`, `rules/`, `README.md`는 이 저장소에서 작성했으며 저장소의 [MIT 라이선스](../../LICENSE)를 따른다.
 
 원본 확인: 2026-10-04, `affaan-m/ECC` main (`skills/security-review/SKILL.md` 최근 커밋 `afa5651`). 이전 저장소 이름은 `affaan-m/everything-claude-code`다.
 

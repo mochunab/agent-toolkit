@@ -1,7 +1,8 @@
-# 보안 규칙 (security-gate 예시)
+# 보안 규칙 (security-gate)
 
-> 선택 구성. 필요한 부분을 프로젝트 또는 사용자 전역의 `CLAUDE.md`·`AGENTS.md`에 붙여 사용한다. 기존 규칙과 겹치면 병합하고, 파일 전체를 덮어쓰지 않는다.
-> 플러그인으로 설치했다면 이름을 `security-gate:security-review`, `security-gate:deploy-checker`로 바꿔 적는다.
+> security-gate 플러그인이 세션 시작마다 이 규칙을 컨텍스트에 넣는다. 플러그인 설치 시 스킬·에이전트 이름은 `security-gate:security-review`, `security-gate:deploy-checker`다.
+> 수동 설치라면 필요한 부분을 프로젝트 또는 사용자 전역의 `CLAUDE.md`·`AGENTS.md`에 병합한다. 파일 전체를 덮어쓰지 않는다.
+> 시크릿 평문 명령·공개 저장소 생성·보호 파일 직접 수정은 플러그인 훅이 실제로 차단한다. 차단되면 우회하지 말고 안내된 방법을 따른다.
 
 ## 요청 라우팅
 

@@ -1,10 +1,10 @@
 {
   "name": "security-gate",
-  "version": "0.2.0",
-  "description": "Security review modes, evidence-based deployment gate, CI blocking template, and a final deploy-checker agent.",
+  "version": "0.3.0",
+  "description": "Security review modes, evidence-based deployment gate, CI blocking template, deploy-checker agent, always-on security rules, and secret/repo/file guard hooks.",
   "author": { "name": "mochunab" },
   "homepage": "https://github.com/mochunab/agent-toolkit/tree/main/plugins/security-gate",
   "repository": "https://github.com/mochunab/agent-toolkit",
   "license": "MIT",
-  "keywords": ["security", "deployment", "ci", "review", "secrets", "sast"]
+  "keywords": ["security", "deployment", "ci", "review", "secrets", "sast", "hooks"]
 }
