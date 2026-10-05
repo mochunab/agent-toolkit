@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>현관문 고무패킹 홍보 영상 (30초, 9:16)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  @font-face { font-family: "Gmarket"; font-weight: 700; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff"); }
+  @font-face { font-family: "Gmarket"; font-weight: 500; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff"); }
+
+  :root {
+    --ink: #141414; --ink2: #3B3B3B; --muted: #727272; --paper: #FFFFFF; --panel: #F2F1ED;
+    --dark: #171717; --yellow: #FFE04A; --red: #EB3B26; --line: #DCDAD4; --review: #1D6FE8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #000; }
+  body { width: 1080px; height: 1920px; overflow: hidden;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, sans-serif; letter-spacing: -0.02em;
+    word-break: keep-all; -webkit-font-smoothing: antialiased; color: var(--ink); text-align: center; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #fff; }
+  .scene { position: absolute; inset: 0; overflow: hidden; }
+  .pad { position: absolute; left: 40px; right: 40px; }
+  img { display: block; }
+  b { font-weight: 800; }
+  .g { font-family: "Gmarket", "Pretendard Variable", sans-serif; }
+
+  .kicker { font-family: "Gmarket"; font-weight: 500; font-size: 40px; color: var(--muted); }
+  .dark .kicker { color: var(--yellow); }
+  .h1 { font-family: "Gmarket"; font-weight: 700; font-size: 112px; line-height: 1.22; letter-spacing: -0.035em; }
+  .h2 { font-family: "Gmarket"; font-weight: 700; font-size: 88px; line-height: 1.28; letter-spacing: -0.035em; }
+  .ln { display: inline-block; }
+  .red { color: var(--red); }
+  .y { color: var(--yellow); }
+  .hl { background: linear-gradient(transparent 50%, var(--yellow) 50%, var(--yellow) 88%, transparent 88%) no-repeat;
+    background-size: calc(var(--p, 1) * 100%) 100%; padding: 0 8px; }
+  .dark .hl { background: var(--yellow); color: var(--ink); padding: 8px 18px 0; display: inline-block; line-height: 1.2; }
+  .credit { font-size: 26px; color: #8C8C8C; line-height: 1.4; }
+  .dark .credit { color: #A8A8A8; }
+
+  /* 검수용 띠 (--clean 으로 렌더하면 숨김) */
+  #review { position: absolute; left: 0; right: 0; bottom: 0; height: 64px; z-index: 50; background: var(--review); color: #fff;
+    font-size: 27px; line-height: 64px; font-weight: 600; letter-spacing: -0.01em; }
+  body.clean #review { display: none; }
+
+  .specbar { display: grid; grid-template-columns: repeat(3, 1fr); background: var(--ink); color: #fff; }
+  .specbar > div { padding: 34px 6px 30px; }
+  .specbar > div + div { border-left: 1px solid #3A3A3A; }
+  .specbar .k { font-size: 30px; color: #BDBDBD; }
+  .specbar .v { font-family: "Gmarket"; font-weight: 700; font-size: 58px; color: var(--yellow); line-height: 1.2; margin-top: 6px; letter-spacing: -0.02em; white-space: nowrap; }
+
+  .badge { display: flex; align-items: center; justify-content: center; gap: 26px; font-family: "Gmarket"; font-weight: 700; font-size: 38px; letter-spacing: 0.06em; }
+  .badge::before, .badge::after { content: ""; width: 120px; border-top: 4px dashed currentColor; opacity: .35; }
+  .badge span { background: var(--ink); color: var(--yellow); padding: 12px 26px 6px; }
+
+  /* A 첫 화면 */
+  #sA .a-photo { position: absolute; left: 0; width: 1080px; top: 735px; }
+  #sA .a-photo img { width: 1080px; height: auto; }
+  #sA .specbar { position: absolute; left: 0; right: 0; top: 1365px; }
+  #sA .a-foot { position: absolute; left: 0; right: 0; top: 1565px; font-size: 44px; font-weight: 800; }
+
+  /* B 자가진단 */
+  .b-row { position: absolute; left: 40px; right: 40px; top: 620px; display: flex; gap: 36px; align-items: flex-start; text-align: left; }
+  .checklist { list-style: none; width: 560px; }
+  .checklist li { display: flex; gap: 20px; align-items: center; padding: 22px 4px; min-height: 130px; border-bottom: 4px solid var(--ink); font-size: 44px; font-weight: 800; line-height: 1.3; }
+  .checklist li:first-child { border-top: 4px solid var(--ink); }
+  .checklist svg { flex: none; width: 56px; height: 56px; }
+  .checklist .tick { stroke-dasharray: 42; stroke-dashoffset: calc(42 * (1 - var(--p, 1))); }
+  .anno { position: relative; width: 420px; flex: none; }
+  .anno img { width: 420px; height: auto; }
+  .anno svg.over { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .anno .tag { position: absolute; background: var(--red); color: #fff; font-family: "Gmarket"; font-weight: 700; font-size: 30px; line-height: 1; padding: 14px 18px 10px; white-space: nowrap; }
+  .eli { transform-box: fill-box; transform-origin: center; }
+  #sB .verdict { position: absolute; left: 0; right: 0; top: 1410px; font-family: "Gmarket"; font-weight: 700; font-size: 64px; line-height: 1.4; letter-spacing: -0.03em; }
+
+  /* C 반전 */
+  #sC .c-title { position: absolute; left: 0; right: 0; top: 150px; }
+  #sC .c-title .h2 { font-size: 84px; margin-top: 22px; }
+  .chat { position: absolute; left: 90px; right: 90px; top: 590px; display: flex; flex-direction: column; gap: 28px; }
+  .bubble { align-self: flex-start; background: #fff; color: var(--ink); font-family: "Gmarket"; font-weight: 500; font-size: 46px; line-height: 1.3; padding: 28px 38px 22px; border-radius: 32px 32px 32px 8px; text-align: left; transform-origin: 0 100%; }
+  .bubble.r { align-self: flex-end; border-radius: 32px 32px 8px 32px; transform-origin: 100% 100%; }
+  #sC .c-credit { position: absolute; left: 0; right: 0; top: 1260px; }
+  .stat { position: absolute; left: 40px; right: 40px; top: 430px; }
+  .stat .num { font-family: "Gmarket"; font-weight: 700; font-size: 250px; line-height: 1; color: var(--yellow); letter-spacing: -0.04em; }
+  .stat .num small { font-size: 88px; color: #fff; letter-spacing: -0.02em; margin-left: 10px; }
+  .stat .cap { position: absolute; left: 0; right: 0; top: 330px; font-family: "Gmarket"; font-weight: 500; font-size: 58px; line-height: 1.45; }
+  .stat .turn { position: absolute; left: 0; right: 0; top: 330px; font-family: "Gmarket"; font-weight: 700; font-size: 74px; line-height: 1.5; letter-spacing: -0.03em; }
+  #sC .foot { position: absolute; left: 60px; right: 60px; top: 1390px; font-size: 30px; line-height: 1.55; color: #A8A8A8; }
+
+  /* D 확인 3개 */
+  .d-head { position: absolute; left: 40px; right: 40px; top: 190px; }
+  .d-head .h2 { margin-top: 36px; }
+  #sD1 .d-row { position: absolute; left: 40px; right: 40px; top: 590px; display: flex; gap: 30px; align-items: flex-start; text-align: left; }
+  #sD1 .anno { width: 540px; }
+  #sD1 .anno img { width: 540px; }
+  #sD1 .anno .tag { font-size: 34px; padding: 16px 20px 12px; }
+  .oxcol { flex: 1; display: flex; flex-direction: column; gap: 24px; }
+  .ox { background: #fff; border: 4px solid var(--ink); padding: 28px 24px 24px; }
+  .ox svg { width: 90px; height: 90px; display: block; }
+  .ox .t { font-family: "Gmarket"; font-weight: 700; font-size: 42px; line-height: 1.25; margin-top: 14px; }
+  .ox .d { font-size: 30px; color: var(--muted); margin-top: 8px; line-height: 1.4; }
+  #sD1 .lead { position: absolute; left: 40px; right: 40px; top: 1510px; font-size: 56px; font-weight: 800; }
+
+  #sD2 .d2-photo { position: absolute; left: 0; width: 1080px; top: 580px; }
+  #sD2 .d2-photo img { width: 1080px; height: auto; }
+  #sD2 .d2-credit { position: absolute; left: 50px; right: 50px; top: 1190px; }
+  #sD2 .sticker-wrap { position: absolute; left: 0; right: 0; top: 1310px; }
+  .sticker { display: inline-block; background: var(--yellow); color: var(--ink); font-family: "Gmarket"; font-weight: 700; font-size: 80px; line-height: 1.25; letter-spacing: -0.03em; padding: 40px 60px 34px; transform: rotate(-2.5deg); box-shadow: 14px 14px 0 var(--ink); border: 4px solid var(--ink); }
+  #sD2 .d2-line { position: absolute; left: 40px; right: 40px; top: 1650px; font-size: 44px; font-weight: 700; }
+
+  #sD3 .door { position: absolute; left: 40px; right: 40px; top: 570px; display: grid; grid-template-columns: 470px 1fr; gap: 34px; align-items: center; text-align: left; }
+  #sD3 .door svg { width: 470px; height: auto; display: block; }
+  #sD3 .door .row { padding: 26px 0 22px; border-bottom: 4px solid var(--ink); }
+  #sD3 .door .row:first-child { border-top: 4px solid var(--ink); }
+  #sD3 .door .row .k { font-family: "Gmarket"; font-weight: 700; font-size: 40px; }
+  #sD3 .door .row .v { font-size: 32px; color: var(--ink2); margin-top: 4px; line-height: 1.4; }
+  #sD3 .formula { position: absolute; left: 0; right: 0; top: 1390px; background: var(--ink); color: #fff; padding: 34px 20px 30px; }
+  #sD3 .formula .k { font-size: 30px; color: #BDBDBD; }
+  #sD3 .formula .v { font-family: "Gmarket"; font-weight: 700; font-size: 72px; color: var(--yellow); letter-spacing: -0.02em; margin-top: 6px; }
+  #sD3 .fig { position: absolute; left: 50px; right: 50px; top: 1625px; }
+  .sv { transform-box: fill-box; }
+
+  /* E 설치 */
+  #sE .e-title { position: absolute; left: 40px; right: 40px; top: 210px; }
+  #sE .e-title .h1 { font-size: 118px; margin-top: 24px; }
+  #sE .steps { position: absolute; left: 40px; right: 40px; top: 760px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; text-align: left; }
+  .steps .num { font-family: "Gmarket"; font-weight: 700; font-size: 30px; color: var(--yellow); letter-spacing: 0.04em; }
+  .steps .num b { font-size: 76px; display: block; line-height: 1; margin-top: 4px; font-weight: 700; }
+  .steps .ph { margin-top: 18px; aspect-ratio: 256 / 370; overflow: hidden; }
+  .steps .ph img { width: 100%; height: 100%; object-fit: cover; }
+  .steps .cap { font-size: 38px; line-height: 1.4; margin-top: 22px; font-weight: 800; color: #fff; }
+  #sE .e-credit { position: absolute; left: 44px; right: 40px; top: 1700px; text-align: left; }
+
+  /* F 마무리 */
+  #sF .f-top { position: absolute; left: 40px; right: 40px; top: 330px; }
+  #sF .kicker { color: var(--ink); }
+  #sF .h1 { font-size: 106px; margin-top: 30px; }
+  #sF .specbar { position: absolute; left: 0; right: 0; top: 880px; }
+  #sF .f-sub { position: absolute; left: 40px; right: 40px; top: 1180px; font-family: "Gmarket"; font-weight: 700; font-size: 54px; }
+  #sF .labels { position: absolute; left: 40px; right: 40px; top: 1320px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  #sF .labels div { background: var(--ink); color: #fff; padding: 30px 8px 24px; font-family: "Gmarket"; font-weight: 700; font-size: 56px; }
+  #sF .labels i { font-style: normal; display: block; font-size: 30px; color: var(--yellow); margin-bottom: 6px; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- A 첫 화면 -->
+  <section class="scene" id="sA" style="background:#fff">
+    <div class="pad" style="top:250px">
+      <p class="kicker" id="a-k">현관문 고무패킹 · 문틀 홈 끼움형</p>
+      <h1 class="h1" style="margin-top:26px"><span class="ln" id="a-l1">현관문 패킹,</span><br><span class="ln" id="a-l2"><span class="hl" id="a-hl">직접 갈아 끼우세요</span></span></h1>
+      <p style="font-size:42px;color:var(--ink2);margin-top:24px;line-height:1.45" id="a-sub">낡은 패킹 빼고, 새 패킹 <b>꾹꾹 눌러 끼우면 끝.</b></p>
+    </div>
+    <div class="a-photo" id="a-photo"><img src="assets/coil_wide.jpg" alt="감겨 있는 검정 현관문 고무패킹"></div>
+    <div class="specbar" id="a-spec">
+      <div id="a-s1"><p class="k">현관문 1개분</p><p class="v">6.3m</p></div>
+      <div id="a-s2"><p class="k">구성</p><p class="v">2.1m × 3줄</p></div>
+      <div id="a-s3"><p class="k">단면</p><p class="v">18 × 14mm</p></div>
+    </div>
+    <p class="a-foot red" id="a-foot">문틀에 홈이 있는 현관문 전용</p>
+  </section>
+
+  <!-- B 자가진단 -->
+  <section class="scene" id="sB" style="background:var(--panel)">
+    <div class="pad" style="top:150px">
+      <p class="kicker" id="b-k">패킹 교체 시기</p>
+      <h2 class="h2" id="b-h" style="margin-top:22px">우리 집 현관 패킹,<br>혹시 <span class="red">이런 상태</span>인가요?</h2>
+    </div>
+    <div class="b-row">
+      <ul class="checklist">
+        <li id="b-i1"><svg viewBox="0 0 44 44"><rect x="2" y="2" width="40" height="40" fill="#fff" stroke="#141414" stroke-width="3"/><path class="tick" id="b-t1" d="M10 23 L19 32 L35 12" fill="none" stroke="#EB3B26" stroke-width="5" stroke-linecap="square"/></svg>딱딱하게 굳었어요</li>
+        <li id="b-i2"><svg viewBox="0 0 44 44"><rect x="2" y="2" width="40" height="40" fill="#fff" stroke="#141414" stroke-width="3"/><path class="tick" id="b-t2" d="M10 23 L19 32 L35 12" fill="none" stroke="#EB3B26" stroke-width="5" stroke-linecap="square"/></svg>갈라지고 부스러져요</li>
+        <li id="b-i3"><svg viewBox="0 0 44 44"><rect x="2" y="2" width="40" height="40" fill="#fff" stroke="#141414" stroke-width="3"/><path class="tick" id="b-t3" d="M10 23 L19 32 L35 12" fill="none" stroke="#EB3B26" stroke-width="5" stroke-linecap="square"/></svg>홈에서 들뜨거나 빠져나와요</li>
+        <li id="b-i4"><svg viewBox="0 0 44 44"><rect x="2" y="2" width="40" height="40" fill="#fff" stroke="#141414" stroke-width="3"/><path class="tick" id="b-t4" d="M10 23 L19 32 L35 12" fill="none" stroke="#EB3B26" stroke-width="5" stroke-linecap="square"/></svg>납작 눌려서 안 돌아와요</li>
+      </ul>
+      <div id="b-photo">
+        <figure class="anno">
+          <img src="assets/install_1@2x.jpg" alt="문틀에서 빼낸 오래된 흰색 고무패킹">
+          <svg class="over" viewBox="0 0 512 740" preserveAspectRatio="none" aria-hidden="true">
+            <ellipse class="eli" id="b-eli" cx="285" cy="300" rx="105" ry="118" fill="none" stroke="#EB3B26" stroke-width="7" stroke-dasharray="16 11"/>
+            <path id="b-line" d="M345 398 L388 560" stroke="#EB3B26" stroke-width="5"/>
+          </svg>
+          <span class="tag" id="b-tag" style="left: 26%; top: 78%;">오래된 패킹</span>
+        </figure>
+        <p class="credit" style="text-align:left;margin-top:14px" id="b-credit">공급처 제공 사진 · 기존 패킹을 빼는 모습</p>
+      </div>
+    </div>
+    <p class="verdict" id="b-verdict">하나라도 해당되면,<br><span class="hl" id="b-hl">패킹을 갈 때</span>가 된 거예요.</p>
+  </section>
+
+  <!-- C 반전 -->
+  <section class="scene dark" id="sC" style="background:var(--dark);color:#fff">
+    <div class="c-title" id="c-title">
+      <p class="kicker">그런데, 잠깐!</p>
+      <h2 class="h2">패킹 사고 후회하는<br><span class="y">가장 큰 이유</span>, 아세요?</h2>
+    </div>
+    <div class="chat" id="c-chat">
+      <p class="bubble" id="c-b1">두꺼워서 문이 안 닫혀요…</p>
+      <p class="bubble r" id="c-b2">잘라서 끼웠는데 반품이 안 된대요</p>
+      <p class="bubble" id="c-b3">치수 보고 샀는데 안 맞아요</p>
+      <p class="bubble r" id="c-b4">홈 폭이 안 맞아서 안 들어가요</p>
+    </div>
+    <p class="credit c-credit" id="c-credit">실제 낮은 별점 후기 내용을 짧게 줄인 문장이에요.</p>
+    <div class="stat" id="c-stat">
+      <p class="num" id="c-num"><span id="c-n">0</span><small>/ 58건</small></p>
+      <p class="cap" id="c-cap">낮은 별점 후기의 절반 이상이<br>‘<span class="y">우리 문에 안 맞아서</span>’였어요.</p>
+      <p class="turn" id="c-turn">패킹은<br><span class="hl" id="c-hl">‘우리 문에 맞는지’</span>가<br>먼저예요.</p>
+    </div>
+    <p class="foot" id="c-foot">2026년 10월, 네이버 현관문 고무패킹 2개 상품의 낮은 별점 후기 58건을 읽고 분류했어요. 문 안 닫힘·두꺼움, 규격·홈이 안 맞음으로 분류된 후기만 셌어요.</p>
+  </section>
+
+  <!-- D1 CHECK 01 -->
+  <section class="scene" id="sD1" style="background:#fff">
+    <div class="d-head">
+      <p class="badge" id="d1-badge"><span>CHECK 01</span></p>
+      <h2 class="h2" id="d1-h">문틀에 <span class="hl" id="d1-hl">‘홈’</span>이 있나요?</h2>
+    </div>
+    <div class="d-row">
+      <div id="d1-photo">
+        <figure class="anno">
+          <img src="assets/install_2@2x.jpg" alt="문틀 홈에 새 패킹을 손으로 눌러 끼우는 모습">
+          <svg class="over" viewBox="0 0 512 740" preserveAspectRatio="none" aria-hidden="true">
+            <ellipse class="eli" id="d1-eli" cx="290" cy="215" rx="88" ry="96" fill="none" stroke="#EB3B26" stroke-width="7" stroke-dasharray="16 11"/>
+            <path id="d1-line" d="M205 190 L120 112" stroke="#EB3B26" stroke-width="5"/>
+          </svg>
+          <span class="tag" id="d1-tag" style="left: 3%; top: 6%;">이 홈에 끼워요</span>
+        </figure>
+        <p class="credit" style="text-align:left;margin-top:14px">공급처 제공 사진</p>
+      </div>
+      <div class="oxcol">
+        <div class="ox" id="d1-ok">
+          <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="20" fill="none" stroke="#141414" stroke-width="7"/></svg>
+          <p class="t">홈이 있으면 OK</p>
+          <p class="d">홈에 패킹을 눌러 끼워요</p>
+        </div>
+        <div class="ox" id="d1-no">
+          <svg viewBox="0 0 52 52" aria-hidden="true"><path d="M10 10 L42 42 M42 10 L10 42" stroke="#EB3B26" stroke-width="7" stroke-linecap="square"/></svg>
+          <p class="t red">홈이 없으면 불가</p>
+          <p class="d">이 제품은 설치할 수 없어요</p>
+        </div>
+      </div>
+    </div>
+    <p class="lead red" id="d1-lead">홈이 없으면 설치할 수 없어요.</p>
+  </section>
+
+  <!-- D2 CHECK 02 -->
+  <section class="scene" id="sD2" style="background:var(--panel)">
+    <div class="d-head">
+      <p class="badge" id="d2-badge"><span>CHECK 02</span></p>
+      <h2 class="h2" id="d2-h">18mm, 우리 문 틈에<br><span class="hl" id="d2-hl">맞을까요?</span></h2>
+    </div>
+    <div class="d2-photo" id="d2-photo"><img src="assets/section_clean.jpg" alt="패킹 단면 높이 18mm, 폭 14mm가 표시된 사진"></div>
+    <p class="credit d2-credit" id="d2-credit">사진·치수: 공급처 제공 · 측정 방법·위치에 따라 차이가 있을 수 있어요</p>
+    <div class="sticker-wrap"><p class="sticker" id="d2-sticker">자르기 전에,<br>한 줄 먼저!</p></div>
+    <p class="d2-line" id="d2-line">한 줄만 끼워 문을 닫아 보고, 잘 닫히면 자르세요.</p>
+  </section>
+
+  <!-- D3 CHECK 03 -->
+  <section class="scene" id="sD3" style="background:#fff">
+    <div class="d-head">
+      <p class="badge" id="d3-badge"><span>CHECK 03</span></p>
+      <h2 class="h2" id="d3-h">2.1m × 3줄이면<br><span class="hl" id="d3-hl">현관문 하나 끝</span></h2>
+    </div>
+    <div class="door">
+      <svg viewBox="0 0 380 600" aria-label="현관문 세 변에 패킹 3줄을 두르는 배치 그림">
+        <rect x="60" y="40" width="260" height="500" fill="#ECEBE6" stroke="#BDBBB4" stroke-width="2"/>
+        <g class="sv" id="d3-bar3" style="transform-origin:0 50%"><rect x="60" y="40" width="260" height="20" fill="#FFE04A" stroke="#141414" stroke-width="2"/></g>
+        <g class="sv" id="d3-bar1" style="transform-origin:50% 0"><rect x="60" y="60" width="20" height="480" fill="#141414"/></g>
+        <g class="sv" id="d3-bar2" style="transform-origin:50% 0"><rect x="300" y="60" width="20" height="480" fill="#141414"/></g>
+        <g class="sv" id="d3-c3" style="transform-origin:50% 50%"><circle cx="190" cy="50" r="22" fill="#141414"/><text x="183" y="59" font-size="24" fill="#FFE04A" font-family="Gmarket" font-weight="700">3</text></g>
+        <g class="sv" id="d3-c1" style="transform-origin:50% 50%"><circle cx="30" cy="300" r="22" fill="#141414"/><text x="23" y="309" font-size="24" fill="#fff" font-family="Gmarket" font-weight="700">1</text></g>
+        <g class="sv" id="d3-c2" style="transform-origin:50% 50%"><circle cx="350" cy="300" r="22" fill="#141414"/><text x="343" y="309" font-size="24" fill="#fff" font-family="Gmarket" font-weight="700">2</text></g>
+        <g id="d3-dim">
+          <text x="196" y="300" font-size="20" fill="#727272" font-family="Pretendard Variable" transform="rotate(-90 196 300)" text-anchor="middle">세로 최대 2,100mm</text>
+          <path d="M60 572 L320 572 M60 562 L60 582 M320 562 L320 582" stroke="#727272" stroke-width="2"/>
+          <text x="190" y="596" font-size="20" fill="#727272" font-family="Pretendard Variable" text-anchor="middle">가로 최대 1,100mm</text>
+        </g>
+      </svg>
+      <div>
+        <div class="row" id="d3-r1"><p class="k">①② 세로 2줄</p><p class="v">세로 두 변에 한 줄씩, 남으면 잘라요</p></div>
+        <div class="row" id="d3-r2"><p class="k">③ 가로 1줄</p><p class="v">문 폭에 맞게 잘라서</p></div>
+        <div class="row" id="d3-r3"><p class="k">최대 문 크기</p><p class="v">가로 1,100 × 세로 2,100mm</p></div>
+      </div>
+    </div>
+    <div class="formula" id="d3-formula">
+      <p class="k">우리 문 홈 길이를 재서 비교하세요</p>
+      <p class="v">세로 × 2 + 가로 ≤ 6.3m</p>
+    </div>
+    <p class="credit fig" id="d3-fig">※ 배치를 보여 주는 그림이에요. 구성·최대 크기는 공급처 안내 기준이에요.</p>
+  </section>
+
+  <!-- E 설치 -->
+  <section class="scene dark" id="sE" style="background:var(--dark);color:#fff">
+    <div class="e-title" id="e-title">
+      <p class="kicker">설치 방법</p>
+      <h1 class="h1">꾹! 꾹!<br><span class="y">눌러 끼우면 끝</span></h1>
+    </div>
+    <div class="steps">
+      <div id="e-s1"><p class="num">STEP<b>01</b></p><div class="ph"><img src="assets/install_1@2x.jpg" alt="문틀에서 기존 고무패킹을 빼는 모습"></div><p class="cap">기존 패킹을<br>빼요</p></div>
+      <div id="e-s2"><p class="num">STEP<b>02</b></p><div class="ph"><img src="assets/install_2@2x.jpg" alt="빈 홈에 새 패킹을 손으로 눌러 끼우는 모습"></div><p class="cap">빈 홈에 새 패킹을<br>꾹꾹 눌러 끼워요</p></div>
+      <div id="e-s3"><p class="num">STEP<b>03</b></p><div class="ph"><img src="assets/install_3@2x.jpg" alt="문틀에 새 패킹 설치가 끝난 모습"></div><p class="cap">문을 여닫아<br>밀착을 확인해요</p></div>
+    </div>
+    <p class="credit e-credit" id="e-credit">사진: 공급처 제공 설치 예시</p>
+  </section>
+
+  <!-- F 마무리 -->
+  <section class="scene" id="sF" style="background:var(--yellow)">
+    <div class="f-top">
+      <p class="kicker" id="f-k">마지막으로 한 번 더</p>
+      <h1 class="h1" id="f-h"><span class="ln" id="f-l1">문틀에 홈이 있는</span><br><span class="ln" id="f-l2">현관문 전용이에요</span></h1>
+    </div>
+    <div class="specbar" id="f-spec">
+      <div><p class="k">현관문 1개분</p><p class="v">6.3m</p></div>
+      <div><p class="k">구성</p><p class="v">2.1m × 3줄</p></div>
+      <div><p class="k">단면</p><p class="v">18 × 14mm</p></div>
+    </div>
+    <p class="f-sub" id="f-sub">주문 전에, 이 3가지만 확인하세요</p>
+    <div class="labels">
+      <div id="f-l-1"><i>01</i>홈</div>
+      <div id="f-l-2"><i>02</i>두께</div>
+      <div id="f-l-3"><i>03</i>길이</div>
+    </div>
+  </section>
+
+  <div id="review">검수용 시안 · 공급처 자료(1단계)만 사용 · 판매 확정 전</div>
+</div>
+
+<script>
+(function () {
+  const TM = window.TIMING;
+  if (!TM) { return; }
+  const S = TM.scenes, R = TM.rel;
+  const E = {
+    lin: p => p,
+    out: p => 1 - Math.pow(1 - p, 3),
+    back: p => { const c = 1.70158 * 1.15, c3 = c + 1; return 1 + c3 * Math.pow(p - 1, 3) + c * Math.pow(p - 1, 2); },
+    inout: p => p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2,
+  };
+  const DEF = { o: 1, x: 0, y: 0, s: 1, r: 0, sx: 1, sy: 1, ct: 0, cr: 0, cb: 0, cl: 0 };
+  const $ = s => document.querySelector(s);
+  const byEl = new Map();
+  const fxs = [];
+  function tw(sel, t0, d, from, to, e) {
+    const el = typeof sel === 'string' ? $(sel) : sel;
+    if (!el) throw new Error('no element ' + sel);
+    if (!byEl.has(el)) byEl.set(el, []);
+    byEl.get(el).push({ t0, d, from, to, e: E[e || 'out'] });
+  }
+  const IN = (sel, t0, d, from, e) => tw(sel, t0, d, Object.assign({ o: 0 }, from), { o: 1 }, e);
+
+  // ---- 장면 전환: 아래에서 위로 닦아 올림
+  ['B', 'C', 'D1', 'D2', 'D3', 'E', 'F'].forEach(k => tw('#s' + k, S[k], 0.3, { ct: 100 }, { ct: 0 }, 'out'));
+
+  // ---- A 첫 화면
+  { const t = S.A, r = R.A;
+    IN('#a-k', t + 0.05, 0.3, { y: 20 });
+    IN('#a-l1', t + r.l1, 0.35, { y: 70 });
+    IN('#a-l2', t + r.l2, 0.35, { y: 70 });
+    tw('#a-hl', t + 1.2, 0.45, { '--p': 0 }, { '--p': 1 }, 'inout');
+    IN('#a-sub', t + 1.0, 0.35, { y: 24 });
+    IN('#a-photo', t + 0.9, 0.5, { y: 140 });
+    r.spec.forEach((x, i) => IN('#a-s' + (i + 1), t + x, 0.25, { y: 30, s: 0.85 }, 'back'));
+    tw('#a-spec', t + 1.9, 0.2, { o: 0 }, { o: 1 });
+    IN('#a-foot', t + 2.8, 0.3, { y: 20 });
+  }
+
+  // ---- B 자가진단
+  { const t = S.B, r = R.B;
+    IN('#b-k', t + 0.1, 0.25, { y: 20 });
+    IN('#b-h', t + 0.15, 0.35, { y: 40 });
+    IN('#b-photo', t + 0.3, 0.45, { x: 80 });
+    r.items.forEach((x, i) => {
+      IN('#b-i' + (i + 1), t + x, 0.25, { x: -60 });
+      tw('#b-t' + (i + 1), t + x + 0.12, 0.2, { '--p': 0 }, { '--p': 1 }, 'out');
+    });
+    tw('#b-eli', t + 0.9, 0.3, { o: 0, s: 0.6 }, { o: 1, s: 1 }, 'back');
+    IN('#b-line', t + 1.1, 0.2, {});
+    IN('#b-tag', t + 1.2, 0.25, { y: 10 });
+    IN('#b-verdict', t + r.verdict, 0.3, { y: 40 });
+    tw('#b-hl', t + r.verdict + 0.35, 0.4, { '--p': 0 }, { '--p': 1 }, 'inout');
+  }
+
+  // ---- C 반전
+  { const t = S.C, r = R.C;
+    IN('#c-title', t + 0.1, 0.35, { y: 40 });
+    r.bubbles.forEach((x, i) => IN('#c-b' + (i + 1), t + x, 0.3, { s: 0.6, y: 30 }, 'back'));
+    IN('#c-credit', t + 1.0, 0.3, {});
+    // 정리 → 큰 숫자
+    ['#c-title', '#c-chat', '#c-credit'].forEach(s => tw(s, t + 2.5, 0.25, { o: 1, y: 0 }, { o: 0, y: -70 }, 'out'));
+    tw('#c-stat', t + 2.55, 0.01, { o: 0 }, { o: 1 });
+    tw('#c-num', t + r.count[0] - 0.05, 0.25, { o: 0, s: 0.8 }, { o: 1, s: 1 }, 'back');
+    IN('#c-cap', t + r.cap, 0.35, { y: 30 });
+    tw('#c-cap', t + 5.0, 0.2, { o: 1 }, { o: 0 }, 'out');
+    IN('#c-foot', t + 3.7, 0.3, {});
+    IN('#c-turn', t + r.turn, 0.3, { y: 30 });
+    tw('#c-hl', t + r.turn + 0.3, 0.35, { cr: 100 }, { cr: 0 }, 'inout');
+    fxs.push(tt => {
+      const p = Math.max(0, Math.min(1, (tt - (t + r.count[0])) / (r.count[1] - r.count[0])));
+      $('#c-n').textContent = Math.round(32 * E.out(p));
+    });
+  }
+
+  // ---- D1 CHECK 01
+  { const t = S.D1, r = R.D1;
+    IN('#d1-badge', t + 0.1, 0.25, { y: 20 });
+    IN('#d1-h', t + 0.25, 0.3, { y: 40 });
+    tw('#d1-hl', t + 0.7, 0.4, { '--p': 0 }, { '--p': 1 }, 'inout');
+    IN('#d1-photo', t + 0.5, 0.4, { x: -80 });
+    tw('#d1-eli', t + r.ellipse, 0.3, { o: 0, s: 0.6 }, { o: 1, s: 1 }, 'back');
+    IN('#d1-line', t + r.ellipse + 0.15, 0.2, {});
+    IN('#d1-tag', t + r.ellipse + 0.25, 0.25, { y: 10 });
+    IN('#d1-ok', t + r.ok, 0.3, { x: 70 });
+    IN('#d1-no', t + r.no, 0.3, { x: 70 });
+    IN('#d1-lead', t + 2.1, 0.3, { y: 30 });
+  }
+
+  // ---- D2 CHECK 02
+  { const t = S.D2, r = R.D2;
+    IN('#d2-badge', t + 0.1, 0.25, { y: 20 });
+    IN('#d2-h', t + 0.25, 0.3, { y: 40 });
+    tw('#d2-hl', t + 0.75, 0.4, { '--p': 0 }, { '--p': 1 }, 'inout');
+    IN('#d2-photo', t + 0.55, 0.45, { x: 120 });
+    IN('#d2-credit', t + 1.0, 0.3, {});
+    tw('#d2-sticker', t + r.sticker, 0.3, { o: 0, s: 1.7, r: -2.5 }, { o: 1, s: 1, r: -2.5 }, 'back');
+    IN('#d2-line', t + 2.0, 0.3, { y: 30 });
+  }
+
+  // ---- D3 CHECK 03
+  { const t = S.D3, r = R.D3;
+    IN('#d3-badge', t + 0.1, 0.25, { y: 20 });
+    IN('#d3-h', t + 0.25, 0.3, { y: 40 });
+    tw('#d3-hl', t + 0.7, 0.4, { '--p': 0 }, { '--p': 1 }, 'inout');
+    tw('#d3-bar1', t + r.bars[0], 0.3, { sy: 0 }, { sy: 1 }, 'out');
+    tw('#d3-bar2', t + r.bars[1], 0.3, { sy: 0 }, { sy: 1 }, 'out');
+    tw('#d3-bar3', t + r.bars[2], 0.3, { sx: 0 }, { sx: 1 }, 'out');
+    ['1', '2', '3'].forEach((n, i) => tw('#d3-c' + n, t + r.bars[i] + 0.2, 0.25, { o: 0, s: 0.3 }, { o: 1, s: 1 }, 'back'));
+    IN('#d3-dim', t + 1.6, 0.3, {});
+    [['#d3-r1', 1.0], ['#d3-r2', 1.3], ['#d3-r3', 1.6]].forEach(([s, x]) => IN(s, t + x, 0.3, { x: 60 }));
+    IN('#d3-formula', t + r.formula, 0.35, { y: 60 });
+    IN('#d3-fig', t + 2.4, 0.3, {});
+  }
+
+  // ---- E 설치
+  { const t = S.E, r = R.E;
+    IN('#e-title', t + 0.1, 0.35, { y: 40 });
+    r.steps.forEach((x, i) => {
+      IN('#e-s' + (i + 1), t + x, 0.3, { y: 60 }, 'out');
+      tw('#e-s' + (i + 1), t + x + 0.3, 0.2, { s: 1 }, { s: 1.035 }, 'out');
+      tw('#e-s' + (i + 1), t + x + 0.5, 0.25, { s: 1.035 }, { s: 1 }, 'out');
+    });
+    IN('#e-credit', t + 1.4, 0.3, {});
+  }
+
+  // ---- F 마무리
+  { const t = S.F, r = R.F;
+    IN('#f-k', t + 0.05, 0.25, { y: 20 });
+    IN('#f-l1', t + r.h1, 0.3, { y: 60 });
+    IN('#f-l2', t + r.h1 + 0.2, 0.3, { y: 60 });
+    IN('#f-spec', t + r.spec, 0.3, { y: 60 });
+    IN('#f-sub', t + 1.05, 0.25, { y: 20 });
+    r.labels.forEach((x, i) => tw('#f-l-' + (i + 1), t + x, 0.25, { o: 0, y: 40, s: 0.8 }, { o: 1, y: 0, s: 1 }, 'back'));
+  }
+
+  // 요소별로 시작 시각 순 정렬
+  byEl.forEach(list => list.sort((a, b) => a.t0 - b.t0));
+
+  window.renderAt = function (t) {
+    byEl.forEach((list, el) => {
+      const st = {};
+      for (const tn of list) {
+        const keys = new Set(Object.keys(tn.from).concat(Object.keys(tn.to)));
+        keys.forEach(k => {
+          const f = (k in tn.from) ? tn.from[k] : DEF[k];
+          const to = (k in tn.to) ? tn.to[k] : DEF[k];
+          if (t < tn.t0) { if (!(k in st)) st[k] = f; }
+          else { const p = Math.min(1, (t - tn.t0) / tn.d); st[k] = f + (to - f) * tn.e(p); }
+        });
+      }
+      let tf = '', hasT = false, cl = null;
+      const g = k => (k in st) ? st[k] : DEF[k];
+      if ('o' in st) el.style.opacity = st.o;
+      if ('x' in st || 'y' in st || 's' in st || 'r' in st || 'sx' in st || 'sy' in st) {
+        el.style.transform = 'translate(' + g('x') + 'px,' + g('y') + 'px) rotate(' + g('r') + 'deg) scale(' + (g('s') * g('sx')) + ',' + (g('s') * g('sy')) + ')';
+      }
+      if ('ct' in st || 'cr' in st || 'cb' in st || 'cl' in st) {
+        el.style.clipPath = 'inset(' + g('ct') + '% ' + g('cr') + '% ' + g('cb') + '% ' + g('cl') + '%)';
+      }
+      Object.keys(st).forEach(k => { if (k.startsWith('--')) el.style.setProperty(k, st[k]); });
+    });
+    fxs.forEach(f => f(t));
+  };
+  // 스티커는 기울기를 유지해야 하므로 r 기본값을 덮어쓰지 않는다
+  const stk = $('#d2-sticker'); stk.style.transformOrigin = '50% 50%';
+  window.__ready = true;
+  window.renderAt(0);
+})();
+</script>
+</body>
+</html>

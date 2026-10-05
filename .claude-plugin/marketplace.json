@@ -24,6 +24,12 @@
       "source": "./plugins/hwp",
       "description": "Read, build and fill Korean HWPX (.hwpx) documents without Hancom Office.",
       "version": "0.1.0"
+    },
+    {
+      "name": "consignment-content",
+      "source": "./plugins/consignment-content",
+      "description": "Detail-page (HTML to PNG) and 30-second promo-video workflows for consignment e-commerce, with guides, templates and helper scripts.",
+      "version": "0.1.0"
     }
   ]
 }

@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=860">
+<title>상세페이지 템플릿</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  사용법: 같은 폴더의 README.md
+  - [대괄호]: 상품 정보로 바꿀 자리 / <span class="todo">: 공급사 확인 뒤 채울 값
+  - <section class="slice" id="sNN-이름"> 하나 = PNG 한 장. 필요 없는 섹션은 통째로 지운다
+  - 사진이 생기면 <div class="ph-box">를 <img src="이미지/파일.jpg" alt="..."> 로 바꾼다
+  - 흐름·장치·모양 규칙: ../상세페이지_디자인_가이드.md 2~4장
+-->
+
+<div class="review-banner">
+  검수용 시안 · [증거 단계: 1 공급처 자료] · <b>파란 점선</b>은 확인 뒤 채울 값이에요. 이 상태로 등록하지 않아요.
+</div>
+
+<!-- S01 첫 화면: 원하는 동작 한 문장 + 제품 사진 + 스펙 띠 + 핵심 조건 -->
+<section class="slice hero" id="s01-첫화면">
+  <p class="kicker">[상품 종류] · [방식·형태]</p>
+  <h1 class="h1">[대상],<br><span class="hl">[원하는 동작] 하세요</span></h1>
+  <p class="sub">[동작을 쉽게 풀어 쓴 한 문장] <b>[짧은 마무리]</b></p>
+  <div class="shot"><div class="ph-box" style="aspect-ratio: 16 / 9;">제품 사진 — 가장 큰 원본에서 자름<br>이미지/제품.jpg</div></div>
+  <div class="specbar">
+    <div><p class="k">[항목 1]</p><p class="v">[값 1]</p></div>
+    <div><p class="k">[항목 2]</p><p class="v">[값 2]</p></div>
+    <div><p class="k">[항목 3]</p><p class="v">[값 3]</p></div>
+  </div>
+  <p class="hero-foot"><span class="red">[구매를 막는 핵심 조건]</span> · 주문 전 확인법은 아래에 ↓</p>
+</section>
+
+<!-- S02 자가진단: 고객의 지금 상태(제품 성능 아님) -->
+<section class="slice bg-panel" id="s02-자가진단">
+  <p class="kicker">[교체 시기 · 필요한 순간]</p>
+  <h2 class="h2">[우리 집 ○○],<br>혹시 <span class="red">이런 상태</span>인가요?</h2>
+
+  <figure class="anno" style="width: 420px; margin-top: 44px;">
+    <div class="ph-box" style="aspect-ratio: 512 / 740;">지금 상태 사진</div>
+    <svg class="over" viewBox="0 0 512 740" preserveAspectRatio="none" aria-hidden="true">
+      <ellipse cx="256" cy="300" rx="105" ry="118" fill="none" stroke="#EB3B26" stroke-width="7" stroke-dasharray="16 11"/>
+      <path d="M320 400 L370 560" stroke="#EB3B26" stroke-width="5"/>
+    </svg>
+    <span class="tag" style="left: 55%; top: 76%;">[주석 라벨]</span>
+  </figure>
+  <p class="credit">[사진 출처 · 무엇을 보여 주는지]</p>
+
+  <ul class="checklist">
+    <li><svg viewBox="0 0 44 44"><rect x="2" y="2" width="40" height="40" fill="#fff" stroke="#141414" stroke-width="3"/><path d="M10 23 L19 32 L35 12" fill="none" stroke="#EB3B26" stroke-width="5" stroke-linecap="square"/></svg>[상태 1]</li>
+    <li><svg viewBox="0 0 44 44"><rect x="2" y="2" width="40" height="40" fill="#fff" stroke="#141414" stroke-width="3"/><path d="M10 23 L19 32 L35 12" fill="none" stroke="#EB3B26" stroke-width="5" stroke-linecap="square"/></svg>[상태 2]</li>
+    <li><svg viewBox="0 0 44 44"><rect x="2" y="2" width="40" height="40" fill="#fff" stroke="#141414" stroke-width="3"/><path d="M10 23 L19 32 L35 12" fill="none" stroke="#EB3B26" stroke-width="5" stroke-linecap="square"/></svg>[상태 3]</li>
+  </ul>
+
+  <p class="verdict">하나라도 해당되면,<br><span class="hl">[결론 한 줄]</span>예요.</p>
+</section>
+
+<!-- S03 반전: 선택 실패 후기 수치(전략서 4절 예외·6절 기준) → 확인 목록 -->
+<section class="slice bg-dark" id="s03-반전">
+  <p class="kicker">그런데, 잠깐!</p>
+  <h2 class="h2">[상품] 사고 후회하는<br><span class="y">가장 큰 이유</span>, 아세요?</h2>
+
+  <div class="chat">
+    <p class="bubble">[후기 요약 1]</p>
+    <p class="bubble r">[후기 요약 2]</p>
+    <p class="bubble">[후기 요약 3]</p>
+  </div>
+  <p class="credit">실제 낮은 별점 후기 내용을 짧게 줄인 문장이에요.</p>
+
+  <div class="stat">
+    <p class="num">[n]<small>/ [전체]건</small></p>
+    <p class="cap">낮은 별점 후기의 [비율 표현]이<br>‘<span class="y">[선택 실패 이유]</span>’였어요.</p>
+    <p class="foot-note">[조사일], [플랫폼] [상품군] [n]개 상품의 낮은 별점 후기 [전체]건([평점 범위])을 읽고 분류했어요.<br>[분류 기준]으로 분류된 후기만 셌어요.</p>
+  </div>
+
+  <div class="chev"><svg viewBox="0 0 300 24" aria-hidden="true"><path d="M0 4 H132 L150 20 L168 4 H300" fill="none" stroke="#5A5A5A" stroke-width="2"/></svg></div>
+
+  <p class="turn">[상품]은 [흔한 기준]보다<br><span class="hl">‘[진짜 먼저 볼 것]’</span>이 먼저예요.</p>
+  <p class="lead" style="margin-top: 30px;">그래서, 주문 전에 딱 [N]가지만 확인하세요.</p>
+  <ol class="index">
+    <li><span class="n">01</span><span>[확인 질문 1]</span></li>
+    <li><span class="n">02</span><span>[확인 질문 2]</span></li>
+    <li><span class="n">03</span><span>[확인 질문 3]</span></li>
+  </ol>
+</section>
+
+<!-- S04 확인 01: 사진 주석 + O/X 그림 + 확인법 -->
+<section class="slice" id="s04-확인1">
+  <p class="badge"><span>CHECK 01</span></p>
+  <h2 class="h2">[확인 질문 1]</h2>
+  <p class="lead">[답 한 줄]<br><b class="red">[안 되는 조건 한 줄]</b></p>
+
+  <figure class="anno" style="width: 440px; margin-top: 50px;">
+    <div class="ph-box" style="aspect-ratio: 512 / 740;">증거 사진</div>
+    <svg class="over" viewBox="0 0 512 740" preserveAspectRatio="none" aria-hidden="true">
+      <ellipse cx="290" cy="215" rx="88" ry="96" fill="none" stroke="#EB3B26" stroke-width="7" stroke-dasharray="16 11"/>
+      <path d="M205 190 L120 112" stroke="#EB3B26" stroke-width="5"/>
+    </svg>
+    <span class="tag" style="left: 3%; top: 6%;">[가리키는 곳]</span>
+  </figure>
+  <p class="credit">[사진 출처]</p>
+
+  <div class="duo">
+    <div class="dg">
+      <svg viewBox="0 0 340 230" aria-hidden="true">
+        <rect x="20" y="40" width="240" height="150" fill="#E4E2DC" stroke="#B9B6AE" stroke-width="3" stroke-dasharray="10 8"/>
+        <text x="140" y="122" font-size="22" fill="#8A877F" font-family="Pretendard Variable" font-weight="700" text-anchor="middle">되는 경우 그림</text>
+        <circle cx="300" cy="44" r="27" fill="none" stroke="#141414" stroke-width="8"/>
+      </svg>
+      <p class="t">[되는 경우]</p>
+      <p class="d">[짧은 설명]</p>
+    </div>
+    <div class="dg">
+      <svg viewBox="0 0 340 230" aria-hidden="true">
+        <rect x="20" y="40" width="240" height="150" fill="#E4E2DC" stroke="#B9B6AE" stroke-width="3" stroke-dasharray="10 8"/>
+        <text x="140" y="122" font-size="22" fill="#8A877F" font-family="Pretendard Variable" font-weight="700" text-anchor="middle">안 되는 경우 그림</text>
+        <path d="M278 20 L322 64 M322 20 L278 64" stroke="#EB3B26" stroke-width="8" stroke-linecap="square"/>
+      </svg>
+      <p class="t red">[안 되는 경우]</p>
+      <p class="d">[짧은 설명]</p>
+    </div>
+  </div>
+  <p class="fig-note">※ 이해를 돕기 위한 그림이에요. 실제 모양은 다를 수 있어요.</p>
+
+  <div class="tipbox">
+    <span class="tl">확인법</span>
+    <p>[고객이 집에서 바로 해 볼 확인 동작]<br>[이렇게 보이면 <b>OK!</b>]</p>
+  </div>
+
+  <ul class="limits">
+    <li>[조건·제한 1] <span class="todo">확인 필요: [무엇]</span></li>
+    <li>[조건·제한 2]</li>
+  </ul>
+</section>
+
+<!-- S05 확인 02: 풀폭 증거 사진 + 재는 위치 그림 + 규칙 스티커 -->
+<section class="slice bg-panel" id="s05-확인2">
+  <p class="badge"><span>CHECK 02</span></p>
+  <h2 class="h2">[수치], [우리 환경]에<br><span class="hl">맞을까요?</span></h2>
+  <p class="lead">주문 전에 <b>[잴 것 1]</b>과 <b>[잴 것 2]</b>을 재 보세요.</p>
+
+  <div style="margin: 50px -56px 0;"><div class="ph-box" style="aspect-ratio: 800 / 438;">치수가 보이는 사진 (가로 860px 풀폭)</div></div>
+  <p class="credit">[사진·치수 출처] · [측정 오차 안내]</p>
+
+  <p class="h3" style="margin-top: 80px;">어디를 재면 되나요?</p>
+  <div class="duo">
+    <div class="dg">
+      <div class="ph-box" style="aspect-ratio: 320 / 240;">재는 위치 그림 ①</div>
+      <p class="t">① [잴 것 1]</p>
+      <p class="d">[재는 방법]</p>
+    </div>
+    <div class="dg">
+      <div class="ph-box" style="aspect-ratio: 320 / 240;">재는 위치 그림 ②</div>
+      <p class="t">② [잴 것 2]</p>
+      <p class="d">[재는 방법]</p>
+    </div>
+  </div>
+  <p class="fig-note">※ 재는 위치를 보여 주는 그림이에요.</p>
+  <p style="margin-top: 30px; font-size: 27px;">이 제품 <b>[기준값]</b>과 비교하세요. 맞는 범위 <span class="todo">확인 필요</span></p>
+
+  <div class="sticker-wrap"><p class="sticker">[실패를 막는<br>규칙 한 줄!]</p></div>
+  <p class="sticker-text">[규칙을 지키는 구체적 행동]<br>[그다음 할 일]</p>
+  <ul class="limits" style="width: 640px; margin-left: auto; margin-right: auto;">
+    <li>[반품·교환 조건] <span class="todo">확인 필요</span></li>
+  </ul>
+</section>
+
+<!-- S06 확인 03: 그림 + 설명 두 단 + 계산 띠 -->
+<section class="slice" id="s06-확인3">
+  <p class="badge"><span>CHECK 03</span></p>
+  <h2 class="h2">[구성]이면<br><span class="hl">[충분하다는 한 줄]</span></h2>
+
+  <div class="split">
+    <div class="ph-box" style="aspect-ratio: 380 / 600;">배치·구성 그림</div>
+    <div>
+      <div class="row"><p class="k">[항목 1]</p><p class="v">[설명]</p></div>
+      <div class="row"><p class="k">[항목 2]</p><p class="v">[설명]</p></div>
+      <div class="row"><p class="k">[최대·최소 조건]</p><p class="v">[값]</p></div>
+    </div>
+  </div>
+  <p class="fig-note">※ 배치를 보여 주는 그림이에요. 구성·크기는 [출처] 기준이에요.</p>
+
+  <div class="formula">
+    <p class="k">[무엇을 재서 비교하는지]</p>
+    <p class="v">[계산식 ≤ 기준값]</p>
+  </div>
+
+  <ul class="limits">
+    <li>[예외 상황] <span class="todo">확인 필요</span></li>
+  </ul>
+</section>
+
+<!-- S07 사용법: 단계 사진 3장(공급처 사진은 사용 방법 안내로만) -->
+<section class="slice bg-dark" id="s07-사용법">
+  <p class="kicker">[사용 방법 · 설치 방법]</p>
+  <h2 class="h2">[구어체 한 줄!]<br><span class="y">[동작] 하면 끝</span></h2>
+
+  <div class="steps">
+    <div>
+      <p class="num">STEP<b>01</b></p>
+      <div class="ph"><div class="ph-box">단계 1 사진</div></div>
+      <p class="cap">[단계 1]</p>
+    </div>
+    <div>
+      <p class="num">STEP<b>02</b></p>
+      <div class="ph"><div class="ph-box">단계 2 사진</div></div>
+      <p class="cap">[단계 2]</p>
+    </div>
+    <div>
+      <p class="num">STEP<b>03</b></p>
+      <div class="ph"><div class="ph-box">단계 3 사진</div></div>
+      <p class="cap">[단계 3]</p>
+    </div>
+  </div>
+  <p class="credit" style="text-align: left;">[사진 출처]</p>
+
+  <p class="prep">준비물 · <b class="y">[따로 준비할 것]</b> <span class="todo">확인 필요: 구성품 포함 여부</span></p>
+</section>
+
+<!-- S08 안심 장치: 실제로 운영할 수 있는 약속만(전략서 6절) -->
+<section class="slice bg-yellow" id="s08-안심">
+  <p class="kicker" style="color: var(--ink);">그래도 헷갈린다면</p>
+  <h2 class="h2">[안심 약속 한 줄]<br>[함께 해 주는 것]</h2>
+  <p class="lead" style="color: var(--ink);">[무엇을 보내면 되는지]<br><b>[문의 창구]</b>로 보내주시면 돼요.</p>
+
+  <div class="ask-row">
+    <div class="ask-card">
+      <svg viewBox="0 0 96 96" aria-hidden="true"><rect x="8" y="24" width="80" height="58" fill="none" stroke="#141414" stroke-width="5"/><rect x="30" y="14" width="36" height="12" fill="#141414"/><circle cx="48" cy="53" r="16" fill="none" stroke="#141414" stroke-width="5"/></svg>
+      <p>① [보낼 것 1]</p>
+    </div>
+    <div class="ask-card">
+      <svg viewBox="0 0 96 96" aria-hidden="true"><rect x="8" y="24" width="80" height="58" fill="none" stroke="#141414" stroke-width="5"/><rect x="30" y="14" width="36" height="12" fill="#141414"/><circle cx="48" cy="53" r="16" fill="none" stroke="#141414" stroke-width="5"/></svg>
+      <p>② [보낼 것 2]</p>
+    </div>
+    <span class="ask-arrow">→</span>
+    <div class="ask-talk"><p>[문의<br>창구]</p></div>
+  </div>
+  <p style="margin-top: 40px; font-size: 24px;">상담 운영 시간·답변 방식 <span class="todo">운영 확인</span></p>
+</section>
+
+<!-- S09 맞는 경우·안 맞는 경우 -->
+<section class="slice" id="s09-맞는경우">
+  <p class="kicker">마지막으로 한 번 더</p>
+  <h2 class="h2">이런 [사용 환경]에 맞아요</h2>
+
+  <div class="fit">
+    <div>
+      <p class="mark"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="20" fill="none" stroke="#141414" stroke-width="7"/></svg>맞아요</p>
+      <ul>
+        <li>[맞는 조건 1]</li>
+        <li>[맞는 조건 2]</li>
+        <li>[맞는 조건 3]</li>
+      </ul>
+    </div>
+    <div>
+      <p class="mark red"><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M10 10 L42 42 M42 10 L10 42" stroke="#EB3B26" stroke-width="7" stroke-linecap="square"/></svg>안 맞아요</p>
+      <ul>
+        <li>[안 맞는 조건 1]</li>
+        <li>[안 맞는 조건 2]</li>
+        <li>[안 맞는 조건 3] <span class="todo">기준 확인 필요</span></li>
+      </ul>
+    </div>
+  </div>
+  <p class="limits" style="font-size: 25px;">※ [조건이 맞아도 생길 수 있는 예외]. <b>[스티커 규칙 다시 한 번]</b></p>
+</section>
+
+<!-- S10 자주 묻는 질문 -->
+<section class="slice bg-panel" id="s10-FAQ">
+  <p class="kicker">자주 묻는 질문</p>
+  <h2 class="h2">주문 전에 많이 물어보세요</h2>
+  <div class="faq">
+    <div class="qa"><p class="q"><i>Q</i>[구성·수량 질문]</p><p class="a">[답]</p></div>
+    <div class="qa"><p class="q"><i>Q</i>[사용·설치 질문]</p><p class="a">[답]</p></div>
+    <div class="qa"><p class="q"><i>Q</i>[준비물 질문]</p><p class="a">[답] <span class="todo">확인 필요</span></p></div>
+    <div class="qa"><p class="q"><i>Q</i>[문제가 생기면?]</p><p class="a">[답] <span class="todo">확인 필요: 대응 방식</span></p></div>
+  </div>
+</section>
+
+<!-- S11 정보·배송·반품: 이 내용은 스마트스토어 편집기에 글자·표로도 넣는다 -->
+<section class="slice" id="s11-정보배송반품">
+  <p class="info-title">제품 정보</p>
+  <table class="info">
+    <tr><th>구성</th><td>[구성·수량]</td></tr>
+    <tr><th>규격</th><td>[치수] ([측정 방법 안내])</td></tr>
+    <tr><th>옵션</th><td><span class="todo">확인 필요: [옵션]</span></td></tr>
+    <tr><th>제조국 · 제조사</th><td>[제조국] · [제조사]</td></tr>
+  </table>
+
+  <p class="info-title">배송 · 반품</p>
+  <table class="info">
+    <tr><th>출고</th><td>[출고 기준] 출고 예정 <span class="todo">확인 필요: 마감 시각</span><br>도착일은 택배사 사정에 따라 달라질 수 있어요.</td></tr>
+    <tr><th>단순 변심</th><td>반품 배송비 <span class="todo">마켓 설정값</span></td></tr>
+    <tr><th>상품 정보와<br>다를 때</th><td>받은 날부터 3개월, 그 사실을 안 날(또는 알 수 있었던 날)부터 30일 안에 신청할 수 있어요.</td></tr>
+  </table>
+</section>
+
+</body>
+</html>

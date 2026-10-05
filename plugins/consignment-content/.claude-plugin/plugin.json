@@ -1,0 +1,10 @@
+{
+  "name": "consignment-content",
+  "version": "0.1.0",
+  "description": "Detail-page (HTML to per-section PNG) and 30-second promo-video (HTML to mp4 with synthesized sound) workflows for consignment e-commerce, with guides, lessons, templates and helper scripts.",
+  "author": { "name": "mochunab" },
+  "homepage": "https://github.com/mochunab/agent-toolkit/tree/main/plugins/consignment-content",
+  "repository": "https://github.com/mochunab/agent-toolkit",
+  "license": "MIT",
+  "keywords": ["detail-page", "product-page", "promo-video", "smartstore", "korean", "e-commerce", "template"]
+}
