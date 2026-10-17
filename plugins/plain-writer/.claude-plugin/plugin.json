@@ -1,0 +1,10 @@
+{
+  "name": "plain-writer",
+  "version": "0.1.0",
+  "description": "Write or polish Korean text people will read (messages, emails, notices, reports) so it is short, clear and conclusion-first.",
+  "author": { "name": "mochunab" },
+  "homepage": "https://github.com/mochunab/agent-toolkit/tree/main/plugins/plain-writer",
+  "repository": "https://github.com/mochunab/agent-toolkit",
+  "license": "MIT",
+  "keywords": ["writing", "korean", "plain-language", "editing", "email", "message"]
+}
