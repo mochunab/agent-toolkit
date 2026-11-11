@@ -4,7 +4,7 @@
 > 독자: 영상을 확인하고 게시를 정할 작업자, 같은 작업을 맡는 AI(Claude·Codex).
 > 기준 결과물: 현관문 고무패킹 30초 영상. 공급처 사진 때문에 mp4는 싣지 않았다. 구성표·문구 근거는 [계획 예시](../assets/sample/현관문_영상계획예시.md), 소스는 `assets/template/`(사진은 자리표시 이미지).
 > 자매 문서: [레슨런](lessons.md)(원칙·교훈, 시작 전 1장 확인) · [결정 기록](decision-log-template.md)(작업별 결정·실수) · [인계서](handoff-template.md)(현재 상태·다음 영상 시작 양식) · [영상 템플릿](template-guide.md)(복사해서 시작).
-> 우선순위: **내용·문장·증거 규칙은 [상세페이지 전략서](../../detail-page/references/strategy.md)가 우선.** 이 문서는 그 내용을 영상으로 어떻게 보여 줄지만 정함.
+> 우선순위: **내용·문장·증거 규칙은 [상세페이지 전략서](../../../../detail-page/skills/detail-page/references/strategy.md)가 우선.** 이 문서는 그 내용을 영상으로 어떻게 보여 줄지만 정함.
 
 ## 1. 한눈에 보기
 
@@ -28,7 +28,7 @@
 
 1. 작업 폴더의 작업 규칙 문서(있으면)
 2. 이 가이드 → [레슨런 1장 원칙](lessons.md#1-원칙--영상이-밋밋하거나-거슬리기-전에-이것부터) → [인계서](handoff-template.md)
-3. [상세페이지 전략서](../../detail-page/references/strategy.md) 3절(문장)·4절(불만 언급 예외)·6절(증거 단계), [디자인 가이드](../../detail-page/references/design-guide.md) 3·4·5장
+3. [상세페이지 전략서](../../../../detail-page/skills/detail-page/references/strategy.md) 3절(문장)·4절(불만 언급 예외)·6절(증거 단계), [디자인 가이드](../../../../detail-page/skills/detail-page/references/design-guide.md) 3·4·5장
 4. 그 상품의 `상세페이지_초안.md`·완성된 `상세페이지.html`·`근거/공급처_원문_*.md`
 
 ### 증거 1단계(공급처 자료)에서 쓸 수 있는 것·없는 것
@@ -185,7 +185,7 @@ python3 "$S/render.py" video "<임시폴더>/영상.mp4" --audio "<임시폴더>
 
 ## 7. 다 됐는지 확인 — 영상 검수
 
-내용 검수는 [전략서 9절](../../detail-page/references/strategy.md#9-무엇을-확인하면-작성이-끝난-것인가)을 먼저 통과시킨다. 그다음:
+내용 검수는 [전략서 9절](../../../../detail-page/skills/detail-page/references/strategy.md#9-무엇을-확인하면-작성이-끝난-것인가)을 먼저 통과시킨다. 그다음:
 
 - [ ] 첫 화면(0~3.5초)만 보고 무엇을 파는지·누구용인지·핵심 조건을 안다
 - [ ] **이전 상품의 문구·사진이 남아 있지 않음**(템플릿은 현관문 내용 그대로다. `영상.html`에서 `현관문`·`패킹`·`6.3`·`2.1m`·`18`·`32`·`58` 등을 검색해 0건 확인)
@@ -247,4 +247,4 @@ python3 "$S/render.py" video "<임시폴더>/영상.mp4" --audio "<임시폴더>
 
 ---
 
-_최초 작성: 2026-10-05 · 근거: [현관문 영상 계획](../assets/sample/현관문_영상계획예시.md) · [결정 기록](decision-log-template.md) · [상세페이지 디자인 가이드](../../detail-page/references/design-guide.md)_
+_최초 작성: 2026-10-05 · 근거: [현관문 영상 계획](../assets/sample/현관문_영상계획예시.md) · [결정 기록](decision-log-template.md) · [상세페이지 디자인 가이드](../../../../detail-page/skills/detail-page/references/design-guide.md)_

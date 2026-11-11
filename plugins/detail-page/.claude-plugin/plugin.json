@@ -1,0 +1,10 @@
+{
+  "name": "detail-page",
+  "version": "0.1.0",
+  "description": "Korean e-commerce product detail pages for any seller and channel: pick one purchase hesitation, draft with evidence levels, build an 11-section HTML page, export per-section PNGs (860px default, --width for other channels), and check copy and numbers.",
+  "author": { "name": "mochunab" },
+  "homepage": "https://github.com/mochunab/agent-toolkit/tree/main/plugins/detail-page",
+  "repository": "https://github.com/mochunab/agent-toolkit",
+  "license": "MIT",
+  "keywords": ["detail-page", "product-page", "smartstore", "coupang", "korean", "e-commerce", "template", "copywriting"]
+}

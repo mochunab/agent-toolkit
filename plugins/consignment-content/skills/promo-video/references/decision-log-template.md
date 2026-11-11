@@ -2,7 +2,7 @@
 
 > 용도: 홍보 영상 작업마다 **무엇을 왜 결정했는지, 어떤 순서로 했는지, 어떤 실수를 했는지** 남기는 작업 일지. 새 항목은 위에 추가함. (공개본에는 양식만 있다.)
 > 독자: 영상을 만드는 작업자, 같은 작업을 맡는 AI.
-> 자매 문서: [제작 레슨런](lessons.md)(여기서 확인된 교훈 중 다음 작업에도 적용할 것만 승격) · [제작 가이드](video-guide.md)(규칙) · [인계서](handoff-template.md) · 상세페이지 쪽 [결정 기록](../../detail-page/references/decision-log-template.md).
+> 자매 문서: [제작 레슨런](lessons.md)(여기서 확인된 교훈 중 다음 작업에도 적용할 것만 승격) · [제작 가이드](video-guide.md)(규칙) · [인계서](handoff-template.md) · 상세페이지 쪽 [결정 기록](../../../../detail-page/skills/detail-page/references/decision-log-template.md).
 
 ## 기록 방법
 

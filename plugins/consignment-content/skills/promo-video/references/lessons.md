@@ -3,7 +3,7 @@
 > 용도: 상품 홍보 영상 작업에서 확인된 원칙·교훈 모음. 날짜별 기록이 아니라 계속 고쳐 쓰는 고유 문서. **다음 영상을 만들기 전에 1장 원칙을 읽음.**
 > 독자: 영상을 만드는 작업자, 같은 작업을 맡는 AI.
 > 갱신 방법: 작업별 결정·과정·실수는 먼저 [결정 기록](decision-log-template.md)에 적고, 다음 작업에도 적용될 교훈만 여기로 옮김. 표의 ‘출처’는 결정 기록의 날짜 항목.
-> 자매 문서: [제작 가이드](video-guide.md)(교훈을 규칙·절차로 정리) · [결정 기록](decision-log-template.md) · [인계서](handoff-template.md) · 상세페이지 쪽 [레슨런](../../detail-page/references/lessons.md).
+> 자매 문서: [제작 가이드](video-guide.md)(교훈을 규칙·절차로 정리) · [결정 기록](decision-log-template.md) · [인계서](handoff-template.md) · 상세페이지 쪽 [레슨런](../../../../detail-page/skills/detail-page/references/lessons.md).
 
 ## 1. 원칙 — 영상이 밋밋하거나 거슬리기 전에 이것부터
 

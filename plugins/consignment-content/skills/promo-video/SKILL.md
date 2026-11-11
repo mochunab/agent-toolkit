@@ -5,7 +5,7 @@ description: 위탁판매 상품의 30초 9:16 모션 그래픽 홍보 영상(HT
 
 # 홍보영상 작업
 
-상세페이지 시안을 8장면·30초로 압축한 세로 영상. 규칙은 `references/`에 있다. `<스킬>`은 이 SKILL.md가 있는 폴더, `<작업폴더>`는 콘텐츠 작업 폴더(없으면 현재 폴더)다. 문구·증거 규칙은 `detail-page` 스킬의 `references/strategy.md`가 우선한다(두 스킬을 함께 설치한다).
+상세페이지 시안을 8장면·30초로 압축한 세로 영상. 규칙은 `references/`에 있다. `<스킬>`은 이 SKILL.md가 있는 폴더, `<작업폴더>`는 콘텐츠 작업 폴더(없으면 현재 폴더)다. 문구·증거 규칙은 `detail-page` 스킬의 `references/strategy.md`가 우선한다(`detail-page`는 별도 플러그인 `detail-page@mochunab-tools`로 함께 설치한다. 그 스킬 폴더 위치는 설치된 스킬 목록에서 확인한다).
 
 ## 1. 게이트 — 영상부터 만들지 않는다
 

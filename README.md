@@ -12,9 +12,10 @@ mochunab이 공유하는 에이전트 스킬·플러그인·MCP 서버·가이�
 | HWP (.hwpx) | 한컴 오피스 없이 hwpx 읽기·마크다운 변환·관공서 양식 채우기 | [HWP README](plugins/hwp/README.md) |
 | Security Gate | 증거 기반 보안 점검, 검사 실패·미검증 시 배포 중단, 보안 규칙 자동 적용, 시크릿 노출·공개 저장소·보호 파일 차단 훅 | [Security Gate README](plugins/security-gate/README.md) |
 | Plain Writer (쉬운 글쓰기) | 메시지·이메일·공지·문의·보고서 같은 한국어 글을 결론 먼저, 짧고 구체적으로 쓰거나 고침 | [Plain Writer README](plugins/plain-writer/README.md) |
-| 위탁판매 콘텐츠 | 상세페이지 이미지 시안(HTML→PNG)과 30초 홍보영상(HTML→mp4) 제작 스킬 2개 + 가이드·레슨런·템플릿·샘플 | [위탁판매 콘텐츠 README](plugins/consignment-content/README.md) |
+| 상세페이지 | 판매 방식·채널(스마트스토어·쿠팡·자사몰 등)에 상관없이 상품 상세페이지 초안 → 11개 섹션 HTML → 섹션별 PNG(기본 860px, 폭 변경 가능) + 문구·숫자 검사 | [상세페이지 README](plugins/detail-page/README.md) |
+| 위탁판매 콘텐츠 | 상세페이지를 30초 세로 홍보영상(HTML→mp4)으로 만드는 스킬 + 가이드·레슨런·템플릿. 상세페이지 플러그인과 함께 설치 | [위탁판매 콘텐츠 README](plugins/consignment-content/README.md) |
 
-공유할 때는 필요한 항목의 폴더 주소만 전달하면 된다. 도구는 각각 설치한다. Mac 앱 테스트 자동화는 실행 코드가 없는 문서 묶음이며, 필요한 외부 도구는 해당 가이드를 따라 설치한다. `agent-toolkit@mochunab-tools` 플러그인이 제공하는 것은 **Aside 스킬**이며, MCP 서버를 한꺼번에 설치하지 않는다. 보안 스킬·에이전트·훅·규칙은 별도 플러그인 `security-gate@mochunab-tools`로 설치한다. HWP 스킬도 독립 플러그인 `hwp@mochunab-tools`로 설치한다. 상세페이지·홍보영상 스킬 2개는 독립 플러그인 `consignment-content@mochunab-tools`로 함께 설치한다. 쉬운 글쓰기 스킬은 독립 플러그인 `plain-writer@mochunab-tools`로 설치한다.
+공유할 때는 필요한 항목의 폴더 주소만 전달하면 된다. 도구는 각각 설치한다. Mac 앱 테스트 자동화는 실행 코드가 없는 문서 묶음이며, 필요한 외부 도구는 해당 가이드를 따라 설치한다. `agent-toolkit@mochunab-tools` 플러그인이 제공하는 것은 **Aside 스킬**이며, MCP 서버를 한꺼번에 설치하지 않는다. 보안 스킬·에이전트·훅·규칙은 별도 플러그인 `security-gate@mochunab-tools`로 설치한다. HWP 스킬도 독립 플러그인 `hwp@mochunab-tools`로 설치한다. 상세페이지 스킬은 독립 플러그인 `detail-page@mochunab-tools`로 설치한다. 홍보영상 스킬은 `consignment-content@mochunab-tools`이며 `detail-page`와 함께 설치한다. 쉬운 글쓰기 스킬은 독립 플러그인 `plain-writer@mochunab-tools`로 설치한다.
 
 ## 공유 주소
 
@@ -24,6 +25,7 @@ mochunab이 공유하는 에이전트 스킬·플러그인·MCP 서버·가이�
 - [HWP 안내](https://github.com/mochunab/agent-toolkit/tree/main/plugins/hwp)
 - [Security Gate 안내](https://github.com/mochunab/agent-toolkit/tree/main/plugins/security-gate)
 - [Plain Writer 안내](https://github.com/mochunab/agent-toolkit/tree/main/plugins/plain-writer)
+- [상세페이지 안내](https://github.com/mochunab/agent-toolkit/tree/main/plugins/detail-page)
 - [위탁판매 콘텐츠 안내](https://github.com/mochunab/agent-toolkit/tree/main/plugins/consignment-content)
 
 ## 라이선스
